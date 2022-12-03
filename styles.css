@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+  }
+
+body {
+    color: var(--text-color);
+    background-color: var(--body-bg-color);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 900px 1fr;
+    grid-template-rows: 100vh 100vh;
+    grid-template-areas: "i1 i2";
+    max-height: 100vh;
+    position: relative;
+}
+
+.item1 {
+    grid-area: i1;
+    display: grid;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 10%;
+
+}
+
+.item2 {
+    grid-area: i2;
+    background-color: #5a5ab6;
+    background-image: url("assets/read_news.jpg");
+    background-size: cover;
+    background-position: right;
+    
+}
+
+.logo {
+    max-width: 70vh;
+}
+
+.texto {
+    margin-top: -10vh;
+    padding-right: 10%;
+    margin-right: 5vh;
+}
+
+form {
+    margin-top: -15vh;
+    display: grid;
+    grid-template-columns: 1fr 10vh;
+    grid-template-rows: 4vh 4vh;
+    grid-template-areas: "label ."
+                         "input button"
+    
+
+}
+
+form label {
+    grid-area: label;
+    max-height: 10px;
+
+}
+
+input {
+    z-index: 10;
+    height: 50px;
+    grid-area: input button;
+    box-shadow: 12px 12px 15px 5px rgba(16, 16, 18, 0.549);
+}
+
+input[type=email] {
+    width: 900px;
+    background-color: var(--form-color);
+    border-left: solid 10px var(--title-color);
+    
+}
+
+input[type=email]:focus {
+    border-left: solid 10px var(--title-color);
+    background-color: var(--text-color);
+    
+}
+
+
+input[type=button] {
+    background-image: url(assets/send.svg);
+    background-color: var(--bg-button-color);
+    background-size: contain;
+    background-size: 40%;;
+    background-repeat: no-repeat;
+    background-position:center;
+    border: var(--bg-button-color);
+}
+
+input[type=button]:hover {
+    box-shadow: 12px 12px 15px 5px rgba(16, 16, 18, 0.803);
+}
+
+input[type=button]:focus {
+    border: solid 4px var(--text-color);
+}
+
+
+
+h1 {
+    font-size: 28px;
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--bg-button-color);
+    text-decoration: none;
+    font-size: 16px;
+}
